@@ -104,4 +104,58 @@ document.addEventListener('DOMContentLoaded', function () {
             form.dispatchEvent(new Event('submit'));
         }
     });
+    document.addEventListener("DOMContentLoaded", () => {
+    const cookieBanner = document.getElementById("cookie-banner");
+    const acceptAllButton = document.getElementById("cookie-accept-all");
+    const rejectAllButton = document.getElementById("cookie-reject-all");
+    const settingsButton = document.getElementById("cookie-settings");
+
+    // Function to hide the cookie banner
+    function hideBanner() {
+        cookieBanner.classList.add("opacity-0");
+        setTimeout(() => {
+            cookieBanner.style.display = "none";
+        }, 300); // Delay to allow the fade-out animation
+    }
+
+    // Function to set a cookie
+    function setCookie(name, value, days) {
+        const date = new Date();
+        date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+        document.cookie = `${name}=${value}; expires=${date.toUTCString()}; path=/`;
+    }
+
+    // Function to get a cookie by name
+    function getCookie(name) {
+        const cookies = document.cookie.split("; ");
+        for (const cookie of cookies) {
+            const [key, value] = cookie.split("=");
+            if (key === name) return value;
+        }
+        return null;
+    }
+
+    // Check if the cookie banner should be displayed
+    if (!getCookie("cookie_consent")) {
+        cookieBanner.style.display = "block";
+    }
+
+    // Accept all cookies
+    acceptAllButton.addEventListener("click", () => {
+        setCookie("cookie_consent", "accepted", 365);
+        hideBanner();
+    });
+
+    // Reject all cookies
+    rejectAllButton.addEventListener("click", () => {
+        setCookie("cookie_consent", "rejected", 365);
+        hideBanner();
+    });
+
+    // Change settings (placeholder functionality)
+    settingsButton.addEventListener("click", () => {
+        alert("Settings dialog will appear here (to be implemented).");
+    });
+});
+
 });

@@ -1,6 +1,7 @@
 import { Head, Link } from '@inertiajs/react';
 import Chatbot from '../components/Chatbot';
-import LandingPage from "../components/LandingPage";
+import CookieConsent from '../Components/CookieConsent';
+import GigComponent from "../components/GigComponent";
 import NavBar from "../components/NavBar";
 import NotfcationBaar from '../components/NotificationBar.jsx';
 
@@ -37,16 +38,17 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
          
                     </div>
                     <main className="grid grid-cols-2 items-center gap-2 py-10 lg:grid-cols-3">
-                     
+                    <CookieConsent className=""/>
                       
-                    <LandingPage/>
+                    <GigComponent/>
                     </main>
 
                 
 
                         <footer className="py-16 text-center text-sm text-black dark:text-white/70">
-                            Laravel v{laravelVersion} (PHP v{phpVersion})
+                      
                             <Chatbot className=""/>
+                            Laravel v{laravelVersion} (PHP v{phpVersion})
                         </footer>
              </div>
      </div>

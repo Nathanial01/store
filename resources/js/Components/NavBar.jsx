@@ -47,7 +47,7 @@ const Navbar = ({ auth }) => {
                     className="lg:hidden text-white focus:outline-none"
                 >
                     <svg
-                        xmlns="http://www.w3.org/2000/svg"
+                       
                         className="h-8 w-8"
                         fill="none"
                         viewBox="0 0 24 24"
@@ -145,7 +145,6 @@ const Navbar = ({ auth }) => {
                                     height="20"
                                     viewBox="0 0 2.4 2.4"
                                     fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
                                 >
                                     <path
                                         stroke="#000"

@@ -1,0 +1,24 @@
+//Available Animations
+//ere’s a summary of the animations you can now use:
+
+//1 Swing (animate-swing):
+
+//A pendulum-like swing motion.
+//2 Bounce (animate-bounce):
+
+//A bouncing effect, useful for call-to-action buttons or alerts.
+//3 Fade (animate-fade):
+
+//A fade-in and fade-out effect.
+//5 Slide-In (animate-slideIn):
+
+//Smoothly slides an element from the left into view.
+//6 Zoom-In (animate-zoomIn):
+
+//Scales an element from 0 to its full size.
+//7 Shake (animate-shake):
+//
+//A quick left-right shaking motion, great for error messages.
+///8 Pulse (animate-pulse):
+
+//Gently increases and decreases opacity to draw attention.

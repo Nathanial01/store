@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const ChatbotPage = () => {
+const Chatbot = () => {
     const [isVisible, setIsVisible] = useState(true);
 
     return (
@@ -9,7 +9,7 @@ const ChatbotPage = () => {
   
                 <iframe
                     src="/chatbot-blade"
-                    className=" fixed w-96  border-none rounded-lg bottom-5 right-4 h-full z-[1]  bg-none rounded-lg"
+                    className=" fixed w-96  border-none rounded-lg bottom-5 right-4 min-h-[600px] max-h-[800px]  z-[1]  bg-none rounded-lg"
                     title="Chatbot"
                 ></iframe>
      
@@ -17,4 +17,4 @@ const ChatbotPage = () => {
     );
 };
 
-export default ChatbotPage;
+export default Chatbot;

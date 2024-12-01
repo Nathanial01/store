@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'api_key' => env('CHATBOT_API_KEY', 'your-default-api-key'),
+    'api_key' => env('CHATBOT_API_KEY', 'defoult'),
 
     /*
     |--------------------------------------------------------------------------
